@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nashwas Grand Thattukada · Malabar Street Kitchen</title>
+<style>
+:root{--bg:#fbf3e3;--bg2:#f3e6cc;--ink:#2a1a10;--mut:#6b5646;--red:#b3261e;--gold:#c98a12;--green:#1f6b4a;--card:#fffaf0;--line:#e2cfa8;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17100b;--bg2:#21160e;--ink:#f6e8cf;--mut:#c0a98c;--red:#ef5a4c;--gold:#f0b43a;--green:#4fc08a;--card:#2a1c12;--line:#4a3322;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17100b;--bg2:#21160e;--ink:#f6e8cf;--mut:#c0a98c;--red:#ef5a4c;--gold:#f0b43a;--green:#4fc08a;--card:#2a1c12;--line:#4a3322;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Georgia,'Times New Roman',serif}
+h1,h2,h3{font-family:'Palatino Linotype',Palatino,Georgia,serif;line-height:1.15;margin:0 0 .4em}
+h1{font-size:clamp(2.2rem,7vw,4.4rem)}h2{font-size:clamp(1.7rem,4vw,2.6rem)}h3{font-size:1.15rem}
+p{margin:0 0 1em;color:var(--mut)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:2px dashed var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;gap:12px;padding:10px 16px;flex-wrap:wrap}
+.logo{font-weight:700;font-size:1.1rem;color:var(--red);cursor:pointer;margin-right:auto;font-family:Palatino,Georgia,serif}
+.logo small{display:block;font-size:.65rem;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
+nav{display:flex;gap:4px;overflow-x:auto;max-width:100%}
+nav a{white-space:nowrap;padding:6px 11px;border-radius:99px;color:var(--ink);text-decoration:none;font-size:.88rem;font-family:system-ui,sans-serif}
+nav a.on,nav a:hover{background:var(--red);color:#fff}
+main{max-width:1100px;margin:auto;padding:24px 16px 60px}
+.pg{display:none}.pg.on{display:block;animation:f .4s}@keyframes f{from{opacity:0;transform:translateY(8px)}}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center;padding:20px 0}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.tag{display:inline-block;font:700 .72rem system-ui;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.btn{display:inline-block;background:var(--red);color:#fff;border:0;padding:12px 22px;border-radius:99px;font:600 .95rem system-ui;cursor:pointer;text-decoration:none;margin:0 8px 8px 0}
+.btn.o{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.cart{background:var(--bg2);border:2px solid var(--line);border-radius:22px;padding:14px;position:relative}
+.band{background:var(--red);color:#fff;border-radius:14px;padding:10px 16px;text-align:center;font:600 .9rem system-ui;letter-spacing:.08em;margin:18px 0;overflow:hidden;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.card svg{display:block;width:100%;height:auto}.card .b{padding:12px 14px 14px}
+.card .b p{font-size:.88rem;margin:0 0 6px}.pr{font:700 .95rem system-ui;color:var(--red)}
+.v{display:inline-block;width:10px;height:10px;border:1.5px solid #1f9d55;margin-right:6px;position:relative;vertical-align:middle}.v::after{content:"";position:absolute;inset:2px;border-radius:50%;background:#1f9d55}
+.v.n{border-color:#a4260f}.v.n::after{background:#a4260f}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 20px}
+.tabs button{background:var(--card);border:1px solid var(--line);color:var(--ink);padding:7px 14px;border-radius:99px;cursor:pointer;font:.85rem system-ui}
+.tabs button.on{background:var(--gold);color:#241505;border-color:var(--gold)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.steps{counter-reset:s;display:grid;gap:12px}.steps div{background:var(--card);border-left:5px solid var(--gold);padding:12px 16px;border-radius:12px;counter-increment:s}
+.steps div::before{content:counter(s) ". ";font-weight:700;color:var(--red)}
+form{display:grid;gap:12px;background:var(--card);border:1px solid var(--line);padding:20px;border-radius:18px}
+input,select,textarea{width:100%;padding:11px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+label{font:600 .8rem system-ui;color:var(--mut)}
+.ok{display:none;background:var(--green);color:#fff;padding:12px;border-radius:12px}
+.pl{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:14px;margin-bottom:18px}
+@media(max-width:760px){.pl{grid-template-columns:1fr}}
+footer{border-top:2px dashed var(--line);text-align:center;padding:22px 16px;color:var(--mut);font-size:.85rem}
+.tw{display:flex;gap:6px;flex-wrap:wrap}.tw span{background:var(--bg2);border-radius:99px;padding:3px 10px;font:.75rem system-ui}
+.ab{display:none;position:absolute;right:8px;bottom:8px;z-index:3;background:var(--gold);color:#241505;border:0;border-radius:99px;padding:6px 12px;font:600 .75rem system-ui;cursor:pointer}body.ed .ab{display:block}
+</style></head><body>
+<header><div class="nav"><div class="logo" data-go="home">Nashwas Grand Thattukada<small>Malabar · Since the night shift</small></div>
+<nav id="nav"></nav></div></header>
+<main id="m"></main>
+<footer>© Nashwas Grand Thattukada · Malabar street kitchen · Open 5 pm – 3 am · <a href="#" id="ed" style="color:inherit">Manage photos</a></footer><input type="file" id="fi" accept="image/*" hidden>
+<script>
+const P=[["home","Home"],["menu","Menu"],["snacks","Malabar Snacks"],["platters","Platters"],["experience","Thattukada"],["story","Malabar Story"],["gallery","Gallery"],["order","Reserve & Order"],["contact","Visit"]];
+const pal={rice:["#e9c46a","#f4e2b0","#9c3d1d","#2f7d4f"],fry:["#c1440e","#e07a1f","#f2b134","#2f7d4f"],bread:["#f1dcae","#e5c98a","#c89a4a","#8b5a2b"],curry:["#a63a1b","#d9822b","#f0c36a","#3b7a45"],fish:["#8c3b1e","#d46a2a","#e9b44c","#2f7d4f"],sweet:["#d9a441","#8b4a1f","#f4d9a0","#b3261e"],veg:["#e0a526","#7a9d2f","#c1440e","#f2e3b5"],drink:["#6b3a1a","#c98a12","#f5e3b8","#2f7d4f"]};
+function rnd(s){return()=>(s=(s*9301+49297)%233280)/233280}
+function art(k,seed,w){const c=pal[k]||pal.rice,r=rnd(seed*7+3);let o=`<svg viewBox="0 0 300 ${w||220}" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="g${seed}" cx="50%" cy="40%"><stop offset="0" stop-color="#3a2415"/><stop offset="1" stop-color="#1a0f08"/></radialGradient></defs><rect width="300" height="${w||220}" fill="url(#g${seed})"/><circle cx="60" cy="40" r="3" fill="#f0b43a" opacity=".6"/><circle cx="250" cy="30" r="2" fill="#f0b43a" opacity=".5"/>`;
+const cy=(w||220)/2+6;o+=`<ellipse cx="150" cy="${cy+6}" rx="108" ry="${(w||220)*.36}" fill="#000" opacity=".35"/><ellipse cx="150" cy="${cy}" rx="104" ry="${(w||220)*.35}" fill="#f6ead0"/><ellipse cx="150" cy="${cy}" rx="86" ry="${(w||220)*.29}" fill="#fff8e8" stroke="#c98a12" stroke-width="2"/>`;
+if(k=="rice"||k=="curry")o+=`<ellipse cx="150" cy="${cy}" rx="62" ry="${(w||220)*.2}" fill="${c[k=="rice"?1:0]}"/>`;
+const n=k=="bread"?4:7;for(let i=0;i<n;i++){const x=95+r()*110,y=cy-30+r()*60,s=k=="bread"?30:9+r()*12;o+=k=="bread"?`<circle cx="${x}" cy="${y}" r="${s}" fill="${c[i%2]}" stroke="${c[2]}" stroke-width="2"/>`:`<ellipse cx="${x}" cy="${y}" rx="${s}" ry="${s*.7}" fill="${c[i%3]}" transform="rotate(${r()*90} ${x} ${y})"/>`}
+for(let i=0;i<6;i++)o+=`<ellipse cx="${100+r()*100}" cy="${cy-35+r()*70}" rx="6" ry="3" fill="${c[3]}" transform="rotate(${r()*180} 150 ${cy})"/>`;
+return o+`<path d="M200 ${cy-60}q10-14 0-26M214 ${cy-62}q10-14 0-26" stroke="#fff" stroke-opacity=".35" fill="none" stroke-width="3"/></svg>`}
+// name, desc, price, type(v=veg,n=nonveg), art kind
+const D={
+"Biriyani & Rice":[["Thalassery Chicken Biriyani","Kaima rice, dum-cooked with spiced chicken, fried onion & ghee",220,"n","rice"],["Malabar Mutton Biriyani","Slow-dum goat meat on fragrant kaima rice",290,"n","rice"],["Egg Biriyani","Masala-coated boiled eggs layered with dum rice",170,"n","rice"],["Fish Biriyani","Seer fish masala layered in Malabar dum rice",260,"n","rice"],["Prawn Biriyani","Juicy prawns, coastal masala, ghee rice",280,"n","rice"],["Veg Dum Biriyani","Seasonal vegetables, saffron, cashew & raisins",160,"v","rice"],["Ghee Rice & Chicken Curry","Neychoru with home-style kozhi curry",180,"n","curry"],["Kuzhi Mandi Chicken","Smoked pit-style chicken over spiced rice",320,"n","rice"]],
+"Pathiri, Parotta & Breads":[["Kerala Parotta","Flaky layered flatbread, hot off the tava (2 pcs)",40,"v","bread"],["Nool Parotta","String parotta with salna",50,"v","bread"],["Ari Pathiri","Soft rice-flour Malabar pathiri (3 pcs)",45,"v","bread"],["Erachi Pathiri","Stuffed with spiced chicken, fried golden",90,"n","bread"],["Chatti Pathiri","Layered Malabar ‘lasagna’ with minced chicken & egg",130,"n","bread"],["Kothu Parotta (Chicken)","Shredded parotta on the iron tava with egg & salna",150,"n","fry"],["Egg Kothu Parotta","Street-classic hammered on the tava",110,"n","fry"],["Veg Kothu Parotta","Vegetable salna, onions, curry leaf",100,"v","fry"],["Appam & Stew","Lacy appam with coconut-milk veg or chicken stew",120,"v","bread"],["Puttu & Kadala","Steamed rice cylinders, black chickpea curry",80,"v","bread"]],
+"Chicken Specials":[["Kozhi Porichathu","Malabar fried chicken, red masala crust",190,"n","fry"],["Chicken 65 Kerala Style","Crisp, curry-leaf tossed, green chilli",180,"n","fry"],["Chicken Pollichathu","Banana-leaf wrapped, spice-roasted",230,"n","fry"],["Kozhi Nirachathu","Whole stuffed chicken, egg & masala filling",420,"n","curry"],["Chicken Roast","Dry coconut-oil roast with shallots",200,"n","curry"],["Chicken Ghee Roast","Rich, ruby-red, ghee finished",220,"n","curry"],["Pepper Chicken","Black pepper & curry leaf stir fry",200,"n","curry"],["Tandoori Chicken","Charcoal-grilled, mint chutney",240,"n","fry"],["Alfaham Chicken","Arabian-style charred grill",260,"n","fry"],["Chicken Lollipop","Frenchee drumettes, sesame glaze",190,"n","fry"]],
+"Mutton Delights":[["Mutton Chukka","Dry-roasted with fennel, pepper & coconut bits",340,"n","curry"],["Mutton Pepper Fry","Fiery Malabar pepper roast",350,"n","curry"],["Mutton Curry","Slow-simmered with whole spices",320,"n","curry"],["Mutton Liver Fry","Street-style, shallot masala",220,"n","fry"],["Mutton Stew","Mild coconut-milk stew with appam",310,"n","curry"]],
+"Seafood (Meen)":[["Karimeen Pollichathu","Pearl spot wrapped in banana leaf",450,"n","fish"],["Meen Fry (Mathi/Ayala)","Sardine/mackerel, red chilli marinade",160,"n","fish"],["Kingfish (Neymeen) Fry","Thick steaks, crisp tava fry",280,"n","fish"],["Malabar Fish Curry","Tangy kudampuli & coconut-oil curry",220,"n","fish"],["Prawn Roast","Tiger prawns, shallot & curry leaf",320,"n","fish"],["Prawn Ghee Roast","Rich, buttery roast",340,"n","fish"],["Squid (Koonthal) Fry","Crispy rings, pepper masala",260,"n","fish"],["Crab Roast","Mud crab, Kerala-spiced",480,"n","fish"],["Kakka Irachi Thoran","Clams, grated coconut stir fry",240,"n","fish"]],
+"Egg & Veg Thattu Specials":[["Mutta Roast","Egg roast in onion-tomato masala",90,"n","curry"],["Kaipola","Classic Malabar egg-stuffed omelette",70,"n","fry"],["Mutta Mala","Sweet golden egg-yolk threads",90,"n","sweet"],["Mutta Surka","Spiced egg-ghee fried dumpling",60,"n","sweet"],["Half-Boil / Double Omelette","The thattukada night staple",40,"n","fry"],["Paneer Butter Masala","Creamy tomato gravy, parotta pairing",190,"v","curry"],["Veg Kuruma","Coconut-based mixed vegetable curry",130,"v","veg"],["Kappa & Meen Curry","Tapioca mash with spicy fish curry",190,"n","curry"],["Kappa Biriyani","Tapioca with masala (veg)",120,"v","veg"],["Gobi Manchurian / Mushroom Pepper Fry","Indo-Chinese street favourites",150,"v","veg"],["Vegetable Cutlet","Crisp beetroot & potato patties",70,"v","veg"]],
+"Snacks (Palaharam)":[["Unnakaya","Sweet banana & coconut fritter",50,"v","sweet"],["Kallummakkaya","Mussels stuffed in rice-batter shells",160,"n","fish"],["Pazham Pori","Banana fritters, golden fried",40,"v","sweet"],["Samosa / Sukhiyan","Tea-time bites (3 pcs)",50,"v","fry"],["Uzhunnu Vada","Crisp lentil doughnuts",40,"v","fry"],["Ela Ada","Rice parcels in banana leaf",50,"v","sweet"],["Kinnathappam","Soft Malabar rice-jaggery cake",60,"v","sweet"],["Alisa","Wheat & chicken Malabar porridge",110,"n","rice"]],
+"Chaya & Coolers":[["Sulaimani","Lemon & spice black tea",25,"v","drink"],["Kadak Chaya","Strong ginger-cardamom milk tea",20,"v","drink"],["Malabar Falooda","Rose, vermicelli, ice cream, nuts",130,"v","drink"],["Sarbath","Sharbath with nannari & basil seeds",70,"v","drink"],["Fresh Lime Soda","Sweet, salt or mixed",50,"v","drink"],["Pazham Shake","Banana-dates-nuts shake",90,"v","drink"],["Pazhamoori Fresh Juices","Watermelon · Orange · Pomegranate",80,"v","drink"]]};
+const PL=[["The Malabar Grand Platter","Serves 4 · ₹1,499","Chicken biriyani, kozhi porichathu, chicken pollichathu, 4 pathiri, egg roast, prawn roast, pickles, raita & salad","rice"],["Thattukada Family Combo","Serves 6 · ₹1,999","Kothu parotta, 6 parotta, chicken roast, mutton chukka, fish fry, kaipola, salna & sulaimani","bread"],["Meen Moilee Seafood Platter","Serves 3 · ₹1,299","Karimeen pollichathu, kingfish fry, prawn roast, squid fry, crab roast, matta rice & fish curry","fish"],["Mandi & Alfaham Platter","Serves 4 · ₹1,399","Kuzhi mandi chicken, alfaham, tandoori chicken, mandi rice, garlic mayo & chutneys","fry"],["Veg Sadya-Style Platter","Serves 2 · ₹599","Veg biriyani, paneer masala, kuruma, thoran, kappa, parotta, pazham pori & payasam","veg"]];
+const GAL=[["Night-lit tava","fry"],["Kothu rhythm","bread"],["Dum biriyani","rice"],["Banana-leaf pollichathu","fish"],["Sweets from the glass case","sweet"],["Sulaimani hour","drink"],["Egg roast","curry"],["Veg thattu","veg"]];
+let cat="B",cc="All",seed=1,sa="All";
+const MB={"Biriyani & Rice":"LD","Pathiri, Parotta & Breads":"BD","Chicken Specials":"LD","Mutton Delights":"LD","Seafood (Meen)":"LD","Egg & Veg Thattu Specials":"BLD","Snacks (Palaharam)":"BD","Chaya & Coolers":"BLD"},MO={"Puttu & Kadala":"B","Appam & Stew":"BD","Kothu Parotta (Chicken)":"D","Egg Kothu Parotta":"D","Veg Kothu Parotta":"D","Kerala Parotta":"BLD","Nool Parotta":"BD","Ari Pathiri":"BLD","Erachi Pathiri":"LD","Chatti Pathiri":"LD","Half-Boil / Double Omelette":"BD","Kappa & Meen Curry":"BL","Kappa Biriyani":"L","Kuzhi Mandi Chicken":"LD","Malabar Falooda":"LD","Gobi Manchurian / Mushroom Pepper Fry":"D","Egg Biriyani":"BLD","Ghee Rice & Chicken Curry":"BLD","Chicken Roast":"BLD","Pepper Chicken":"BLD","Mutton Curry":"BLD","Mutton Stew":"BLD","Meen Fry (Mathi/Ayala)":"BLD","Malabar Fish Curry":"BLD"};
+const ml=(k,n)=>MO[n]||MB[k]||"BLD";
+function slug(n){return n.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")}
+// Real photo goes in images/<slug>.jpg next to this file; illustration shows until then
+function pic(k,s,w,n){return `<div class="pw" data-s="${slug(n)}" style="position:relative">${art(k,s,w)}<button class="ab" type="button">📷 Add photo</button><img src="images/${slug(n)}.jpg" alt="${n}" loading="lazy" onerror="this.remove()" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>`}
+const SN=`Unnakaya|Ripe plantain and coconut-jaggery fritter|sweet|v|K
+Pazham Nirachathu|Banana stuffed with coconut-sugar, pan-fried|sweet|v|T
+Pazham Pori|Batter-fried ethakka banana|sweet|v|B
+Kallummakkaya|Mussels packed in rice-batter shells|fish|n|K
+Kalathappam|Steamed jaggery-coconut rice cake|sweet|v|T
+Kinnathappam|Soft jaggery-rice cake squares|sweet|v|T
+Mutta Mala|Egg-yolk threads in sugar syrup|sweet|n|K
+Mutta Surka|Fluffy sweet egg-semolina fritter|sweet|n|K
+Kaipola|Sweet egg and mashed-banana omelette|sweet|n|T
+Chatti Pathiri|Layered chicken-egg Malabar pie|bread|n|T
+Erachi Pathiri|Chicken-stuffed rice pastry|bread|n|K
+Meen Pathiri|Spicy fish-stuffed rice pastry|fish|n|T
+Pidi and Kozhi Curry|Rice dumplings with chicken curry|rice|n|T
+Kozhi Ada|Rice crust stuffed with spicy chicken|bread|n|K
+Ela Ada|Rice-jaggery parcel in banana leaf|sweet|v|B
+Neyyappam|Ghee-fried jaggery rice fritter|sweet|v|B
+Uzhunnu Vada|Crisp lentil doughnuts|fry|v|B
+Parippu Vada|Spiced dal fritters|fry|v|B
+Sukhiyan|Green-gram jaggery balls, fried|sweet|v|B
+Samosa|Spicy potato-peas triangles|fry|v|B
+Chicken Cutlet|Crumb-fried spiced patties|fry|n|K
+Egg Bonda|Boiled egg in gram-flour batter|fry|n|K
+Mutta Bajji|Egg slices fried in gram batter|fry|n|K
+Vazhakka Bajji|Raw banana fritters|fry|v|B
+Mulaku Bajji|Stuffed chilli fritters|fry|v|B
+Ulli Vada|Crunchy onion fritters|fry|v|B
+Kuzhalappam|Crisp rice-flour tubes, coconut-sugar filling|sweet|v|K
+Achappam|Rose-cookie rice-flour lace|sweet|v|K
+Kozhukatta|Steamed rice dumplings|sweet|v|B
+Avilose Unda|Rice-flour coconut-jaggery balls|sweet|v|K
+Kozhikodan Halwa|Glossy, chewy Kozhikode sweet|sweet|v|K
+Banana Halwa|Plantain halwa, ghee-rich|sweet|v|K
+Chemmeen Pathiri|Prawn-stuffed rice pastry|fish|n|T
+Chicken Puffs|Flaky pastry, chicken masala|fry|n|B
+Egg Puffs|Flaky pastry, masala egg|fry|n|B
+Veg Puffs|Flaky pastry, vegetable filling|fry|v|B
+Chicken Roll|Crisp spiced chicken roll|fry|n|T
+Nei Pathal|Ghee-crisp rice wafers|sweet|v|T
+Mutta Pathiri|Egg-stuffed pathiri|bread|n|T
+Sweet Boli|Jaggery-coconut stuffed flatbread|sweet|v|K
+Thalassery Chicken Samosa|Spiced chicken triangles|fry|n|T
+Cheeda|Crisp sweet rice-flour bites|sweet|v|T
+Unniyappam|Banana-jaggery rice dumplings|sweet|v|B
+Mathi Fry|Crisp sardines, red masala|fish|n|K
+Koonthal Fry|Pepper-spiced squid rings|fish|n|K
+Kadala Mittayi|Peanut-jaggery brittle|sweet|v|K
+Chakka Varatti|Jackfruit jaggery roll|sweet|v|B
+Kappa Fry|Crisp tapioca chips|fry|v|K
+Banana Chips|Coconut-oil fried chips|fry|v|K
+Sharkara Varatti|Jaggery-coated banana chips|sweet|v|K
+Avil Milk|Chilled banana-avil milkshake|drink|v|K
+Sulaimani|Lemon and spice black tea|drink|v|B
+Kozhikodan Sarbath|Nannari, basil seed and lime cooler|drink|v|K`.trim().split("\n").map(l=>l.split("|"));
+const dish=(d)=>`<div class="card">${pic(d[4],seed++,0,d[0])}<div class="b"><h3><span class="v ${d[3]=="n"?"n":""}"></span>${d[0]}</h3><p>${d[1]}</p></div></div>`;
+const V={
+home:()=>`<section class="hero"><div><span class="tag">Malabar · Street Kitchen · Est. after sundown</span><h1>The night belongs to the <span style="color:var(--red)">thattukada</span>.</h1><p>Hot tava, sizzling kothu, dum biriyani and a glass of sulaimani — the real Malabar roadside experience, upgraded into a grand kitchen.</p><a class="btn" href="#menu">Explore the Menu</a><a class="btn o" href="#order">Reserve a Table</a></div><div class="cart">${art("fry",99,260)}</div></section>
+<div class="band">★ KOTHU PAROTTA · THALASSERY BIRIYANI · KARIMEEN POLLICHATHU · KOZHI PORICHATHU · SULAIMANI ★</div>
+<h2>Signature plates</h2><div class="grid">${[D["Biriyani & Rice"][0],D["Chicken Specials"][0],D["Seafood (Meen)"][0],D["Pathiri, Parotta & Breads"][5]].map(dish).join("")}</div>
+<div class="band" style="background:var(--green)">OPEN DAILY 5 PM – 3 AM · DINE-IN · TAKEAWAY · CAR SERVICE</div>`,
+menu:()=>`<span class="tag">Complete menu</span><h2>Malabar on a plate</h2><p>Chicken, mutton, seafood, egg & vegetarian Malabar favourites.</p><div class="tag" style="margin:6px 0 0">1 · Choose meal</div><div class="tabs" id="tabs">${[["B","Breakfast"],["L","Lunch"],["D","Dinner"]].map(x=>`<button class="${x[0]==cat?"on":""}" data-c="${x[0]}">${x[1]}</button>`).join("")}</div><div class="tag" style="margin:0">2 · Choose category</div><div class="tabs" id="ctabs">${["All",...Object.keys(D)].map(k=>`<button class="${k==cc?"on":""}" data-k="${k}">${k}</button>`).join("")}</div>${Object.keys(D).filter(k=>cc=="All"||k==cc).map(k=>{let L=D[k].filter(d=>ml(k,d[0]).includes(cat));if(!L.length)L=D[k];return L.length?`<h2 style="font-size:1.4rem;margin:24px 0 12px;color:var(--gold)">${k}</h2><div class="grid">${L.map(dish).join("")}</div>`:""}).join("")}`,
+platters:()=>`<span class="tag">Sharing is caring</span><h2>Grand platters</h2><p>Built for tables, families and late-night gangs.</p>${PL.map((p,i)=>`<div class="pl" ${i%2?'style="direction:rtl"':''}><div style="direction:ltr">${pic(p[3],50+i,240,p[0])}</div><div style="direction:ltr"><h3 style="font-size:1.5rem">${p[0]}</h3><span class="pr">${p[1].split(" · ")[0]}</span><p style="margin-top:8px">${p[2]}</p><a class="btn" href="#order">Order this</a></div></div>`).join("")}`,
+experience:()=>`<div class="two"><div><span class="tag">The Tattukada experience</span><h2>Roadside soul, grand comfort</h2><p>A thattukada is Kerala’s late-night street stall: a wide iron tava, a glowing lamp, stacked parotta and a queue of happy strangers. We rebuilt that magic — hanging bulbs, steel plates, tea-glass clinks — with spotless hygiene and seating for everyone.</p><div class="tw"><span>Live tava counter</span><span>Kerala bulb lighting</span><span>Steel plates &amp; tea glasses</span><span>Family seating</span><span>Car service</span></div></div><div class="cart">${art("bread",77,260)}</div></div><h2 style="margin-top:34px">How a night at Nashwas goes</h2><div class="steps"><div>Walk up to the glowing counter and watch parotta being slapped, layered and torn.</div><div>Pick a gravy — salna with chicken, egg, fish or veg.</div><div>Hear the rhythm of the kothu blades on the hot tava.</div><div>Sip sulaimani from a glass while biriyani is opened fresh from the dum.</div><div>Finish with unnakaya, kinnathappam or a rose falooda.</div></div>`,
+story:()=>`<div class="two"><div><span class="tag">Malabar story</span><h2>From Kozhikode kitchens to your table</h2><p>Malabar cuisine grew where Arab traders, Mappila families and Kerala spices met. Thalassery biriyani, pathiri, kaipola, mutta mala and kallummakkaya are the heart of that story.</p><p>Nashwas Grand Thattukada keeps those recipes honest: coconut-oil tempering, hand-ground masala, kaima rice for biriyani and small-batch dum cooking. Every plate is cooked fresh, in the order you place it.</p></div><div class="cart">${art("rice",31,260)}</div></div><div class="grid" style="margin-top:26px">${[["Mappila heritage","Thalassery biriyani & pathiri tradition"],["Spice-first","Fresh black pepper, fennel, cardamom"],["Coconut-oil cooking","The authentic flavour base"],["Fresh every order","Cooked to order, never reheated"]].map(x=>`<div class="card"><div class="b"><h3>${x[0]}</h3><p>${x[1]}</p></div></div>`).join("")}</div>`,
+gallery:()=>`<span class="tag">Gallery</span><h2>Plates, platters &amp; midnight glow</h2><div class="grid">${GAL.map((g,i)=>`<div class="card">${pic(g[1],200+i,g[1]=="fry"?260:200,g[0])}<div class="b"><p style="margin:0">${g[0]}</p></div></div>`).join("")}</div><p style="margin-top:14px;font-size:.8rem">Illustrated artwork. Replace with your own food photography when ready.</p>`,
+order:()=>`<div class="two" style="align-items:start"><div><span class="tag">Reserve &amp; order</span><h2>Book your table</h2><p>Reserve for dining or pre-order a platter for pickup. We’ll confirm by phone.</p></div><form id="f"><div><label>Name</label><input required id="n"></div><div><label>Phone</label><input required type="tel" id="t"></div><div><label>Type</label><select id="ty"><option>Dine-in table</option><option>Takeaway pre-order</option><option>Platter pre-order</option></select></div><div><label>Date &amp; time</label><input type="datetime-local" required id="d"></div><div><label>Guests / notes</label><textarea rows="3" id="g" placeholder="4 guests · no spice · Mandi platter"></textarea></div><button class="btn">Send request</button><div class="ok" id="ok"></div></form></div>`,
+contact:()=>`<div class="two"><div><span class="tag">Find us</span><h2>Visit the thattukada</h2><p><b>Nashwas Grand Thattukada</b><br>Malabar, Kerala — add street address here</p><p><b>Hours:</b> 5 pm – 3 am, every day<br><b>Phone / WhatsApp:</b> add number here<br><b>Instagram:</b> @nashwasgrandthattukada</p><div class="tw"><span>Dine-in</span><span>Takeaway</span><span>Car service</span><span>Family area</span><span>Parking</span></div></div><div class="cart">${art("drink",12,260)}</div></div>`};
+V.snacks=()=>{const L=SN.filter(s=>sa=="All"||s[4]==sa),A={T:"Thalassery",K:"Kozhikode",B:"Both towns"};return `<span class="tag">Malabar snacks</span><h2>${SN.length} Thalassery &amp; Kozhikode snacks</h2><p>Palaharam from the two food capitals of Malabar, fried, steamed and sweetened to order.</p><div class="tabs" id="stabs">${[["All","All"],["T","Thalassery"],["K","Kozhikode"],["B","Both towns"]].map(x=>`<button data-a="${x[0]}" class="${x[0]==sa?"on":""}">${x[1]}</button>`).join("")}</div><div class="grid">${L.map((s,i)=>`<div class="card">${pic(s[2],300+i,0,s[0])}<div class="b"><h3><span class="v ${s[3]=="n"?"n":""}"></span>${s[0]}</h3><p>${s[1]}</p><div class="tw"><span>${A[s[4]]}</span></div></div></div>`).join("")}</div>`};
+function go(){const h=(location.hash||"#home").slice(1),k=V[h]?h:"home";document.getElementById("m").innerHTML=`<section class="pg on">${V[k]()}</section>`;document.getElementById("nav").innerHTML=P.map(p=>`<a href="#${p[0]}" class="${p[0]==k?"on":""}">${p[1]}</a>`).join("");if(!window.kp)scrollTo(0,0);window.kp=0;bind();hy()}
+function bind(){const t=document.getElementById("tabs");if(t)t.onclick=e=>{if(e.target.dataset.c){cat=e.target.dataset.c;seed=1;kp=1;go()}};const ct=document.getElementById("ctabs");if(ct)ct.onclick=e=>{if(e.target.dataset.k){cc=e.target.dataset.k;seed=1;kp=1;go()}};const st=document.getElementById("stabs");if(st)st.onclick=e=>{if(e.target.dataset.a){sa=e.target.dataset.a;kp=1;go()}};const f=document.getElementById("f");if(f)f.onsubmit=e=>{e.preventDefault();const o=document.getElementById("ok");o.style.display="block";o.textContent="Thank you, "+document.getElementById("n").value+"! Your request has been noted — we’ll call to confirm."};document.querySelectorAll("[data-go]").forEach(x=>x.onclick=()=>location.hash=x.dataset.go)}
+const DB=new Promise(r=>{try{const q=indexedDB.open("ntk",1);q.onupgradeneeded=()=>q.result.createObjectStore("p");q.onsuccess=()=>r(q.result);q.onerror=()=>r(null)}catch(e){r(null)}});
+const rq=(m,k,v)=>DB.then(d=>d&&new Promise(r=>{try{const s=d.transaction("p",m=="get"?"readonly":"readwrite").objectStore("p"),q=m=="get"?s.get(k):s.put(v,k);q.onsuccess=()=>r(q.result);q.onerror=()=>r(null)}catch(e){r(null)}}));
+function hy(){document.querySelectorAll(".pw").forEach(w=>rq("get",w.dataset.s).then(b=>{if(b){w.querySelectorAll("img.up").forEach(i=>i.remove());const i=document.createElement("img");i.className="up";i.src=URL.createObjectURL(b);i.style.cssText="position:absolute;inset:0;width:100%;height:100%;object-fit:cover";w.appendChild(i)}}))}
+let cur;document.addEventListener("click",e=>{if(e.target.classList.contains("ab")){cur=e.target.parentNode.dataset.s;document.getElementById("fi").click()}if(e.target.id=="ed"){e.preventDefault();document.body.classList.toggle("ed")}});
+document.getElementById("fi").onchange=e=>{const f=e.target.files[0];if(f&&cur)rq("put",cur,f).then(()=>{hy();e.target.value=""})};
+addEventListener("hashchange",go);go();
+</script></body></html>
